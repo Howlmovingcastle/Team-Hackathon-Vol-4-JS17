@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import AdminPage from "./pages/AdminPage";
 import Error404 from "./pages/Error404";
+import AuthPage from "./pages/AuthPage";
 
 const MainRoutes = () => {
   const PUBLIC_ROUTES = [
@@ -10,6 +11,11 @@ const MainRoutes = () => {
       link: "/",
       element: <HomePage />,
       id: 1,
+    },
+    {
+      link: "/authpage",
+      element: <AuthPage />,
+      id: 2,
     },
   ];
 

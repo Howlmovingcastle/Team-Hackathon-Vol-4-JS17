@@ -1,96 +1,63 @@
-import React from "react";
+import React, { useState } from "react";
+
+import { HiMenuAlt4, HiX } from "react-icons/hi";
+import { motion } from "framer-motion";
+import "./Navbar.scss";
 import { Badge } from "@material-ui/core";
-import { Search, ShoppingCartOutlined } from "@material-ui/icons";
-import styled from "styled-components";
-import { mobile } from "../../responsive";
-
-const Container = styled.div`
-  height: 60px;
-  ${mobile({ height: "50px" })}
-`;
-
-const Wrapper = styled.div`
-  padding: 10px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  ${mobile({ padding: "10px 0px" })}
-`;
-
-const Left = styled.div`
-  flex: 1;
-  display: flex;
-  align-items: center;
-`;
-
-const Language = styled.span`
-  font-size: 14px;
-  cursor: pointer;
-  ${mobile({ display: "none" })}
-`;
-
-const SearchContainer = styled.div`
-  border: 0.5px solid lightgray;
-  display: flex;
-  align-items: center;
-  margin-left: 25px;
-  padding: 5px;
-`;
-
-const Input = styled.input`
-  flex: 1;
-  border: none;
-  ${mobile({ width: "50px" })}
-`;
-
-const Center = styled.div`
-  flex: 1;
-  text-align: center;
-`;
-
-const Logo = styled.h1`
-  margin-right: 20px;
-  font-weight: bold;
-  ${mobile({ fontSize: "24px" })}
-`;
-const Right = styled.div`
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  ${mobile({ flex: 2, justifyContent: "center" })}
-`;
-
-const MenuItem = styled.div`
-  font-size: 14px;
-  cursor: pointer;
-  margin-left: 25px;
-  ${mobile({ fontSize: "12px", marginLeft: "10px" })}
-`;
+import Button from "@mui/material/Button";
+import { ShoppingCartOutlined } from "@material-ui/icons";
 
 const Navbar = () => {
+  const [toggle, setToggle] = useState(false);
+
   return (
-    <Container>
-      <Wrapper>
-        <Left>
-          <Logo>LAYLA.</Logo>
-          <Language>EN</Language>
-          <SearchContainer>
-            <Input placeholder="Search" />
-            <Search style={{ color: "gray", fontSize: 16 }} />
-          </SearchContainer>
-        </Left>
-        <Center></Center>
-        <Right>
-          <MenuItem>SIGN UP</MenuItem>
-          <MenuItem>
-            <Badge badgeContent={4} color="primary">
-              <ShoppingCartOutlined />
-            </Badge>
-          </MenuItem>
-        </Right>
-      </Wrapper>
-    </Container>
+    <nav className="app__navbar">
+      <div className="app__navbar-logo">
+        <img
+          src="https://logos.textgiraffe.com/logos/logo-name/Layla-designstyle-pastel-m.png"
+          alt="logo"
+        />
+      </div>
+      <ul className="app__navbar-links">
+        {["home", "best collection", "products", "contact us", "faq"].map(
+          (item) => (
+            <li className="app__flex p-text" key={`link-${item}`}>
+              <div />
+              <a href={`#${item}`}>{item}</a>
+            </li>
+          )
+        )}
+      </ul>
+      <div>
+        <Button style={{ margin: "20px" }}>Sign Up</Button>
+        <Badge badgeContent={0} color="primary">
+          <ShoppingCartOutlined />
+        </Badge>
+      </div>
+
+      <div className="app__navbar-menu">
+        <HiMenuAlt4 onClick={() => setToggle(true)} />
+        {toggle && (
+          <motion.div
+            whileInView={{ x: [300, 0] }}
+            transition={{ duration: 0.85, ease: "easeOut" }}
+          >
+            <HiX onClick={() => setToggle(false)} />
+            <ul>
+              {["home", "best collection", "products", "contact us", "faq"].map(
+                (item) => (
+                  <li key={{ item }}>
+                    <a href={`#${item}`} onClick={() => setToggle(false)}>
+                      {item}
+                    </a>
+                  </li>
+                )
+              )}
+            </ul>
+          </motion.div>
+        )}
+      </div>
+    </nav>
   );
 };
 
