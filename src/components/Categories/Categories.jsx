@@ -3,6 +3,8 @@ import { categories } from "../../data";
 import { mobile } from "../../responsive";
 import CategoryItem from "./CategoriesItem";
 
+// Categories
+
 const Container = styled.div`
   display: flex;
   padding: 20px;
