@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { categories } from "../../data";
-import { mobile } from "../../responsive";
+import { mobile, responsivecategories } from "../../responsive";
 import CategoryItem from "./CategoriesItem";
 
 // Categories

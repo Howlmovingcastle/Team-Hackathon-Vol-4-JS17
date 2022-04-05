@@ -1,13 +1,13 @@
 export const sliderItems = [
   {
-    id: 2,
+    id: 1,
     img: "https://i.ibb.co/cXFnLLV/3.png",
     title: "AUTUMN COLLECTION",
     desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
     bg: "fcf1ed",
   },
   {
-    id: 1,
+    id: 2,
     img: "https://i.ibb.co/DG69bQ4/2.png",
     title: "SUMMER SALE",
     desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
@@ -19,6 +19,13 @@ export const sliderItems = [
     title: "LOUNGEWEAR LOVE",
     desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
     bg: "fbf0f4",
+  },
+  {
+    id: 4,
+    img: "https://i.ibb.co/DG69bQ4/2.png",
+    title: "SUMMER SALE",
+    desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
+    bg: "f5fafd",
   },
 ];
 
@@ -72,5 +79,108 @@ export const popularProducts = [
   {
     id: 8,
     img: "https://www.pngarts.com/files/3/Women-Jacket-PNG-High-Quality-Image.png",
+  },
+];
+
+export const brands = [
+  {
+    brand: "GUCCI",
+    logo: "https://www.prada.com/content/dam/pradanux_products/U/UCS/UCS319/1YOTF010O/UCS319_1YOT_F010O_S_182_SLF.png",
+    id: 1,
+  },
+  {
+    brand: "Celestine",
+    logo: "https://www.prada.com/content/dam/pradanux_products/U/UCS/UCS319/1YOTF010O/UCS319_1YOT_F010O_S_182_SLF.png",
+    id: 2,
+  },
+  {
+    brand: "BOVET",
+    logo: "https://www.prada.com/content/dam/pradanux_products/U/UCS/UCS319/1YOTF010O/UCS319_1YOT_F010O_S_182_SLF.png",
+    id: 3,
+  },
+  {
+    brand: "ALEXANDRE MEERSON",
+    logo: "https://www.prada.com/content/dam/pradanux_products/U/UCS/UCS319/1YOTF010O/UCS319_1YOT_F010O_S_182_SLF.png",
+    id: 4,
+  },
+  {
+    brand: "ARMIN STROM",
+    logo: "https://www.prada.com/content/dam/pradanux_products/U/UCS/UCS319/1YOTF010O/UCS319_1YOT_F010O_S_182_SLF.png",
+    id: 5,
+  },
+  {
+    brand: "BLANCPAIN",
+    logo: "https://www.prada.com/content/dam/pradanux_products/U/UCS/UCS319/1YOTF010O/UCS319_1YOT_F010O_S_182_SLF.png",
+    id: 6,
+  },
+  {
+    brand: "BOVET",
+    logo: "https://www.prada.com/content/dam/pradanux_products/U/UCS/UCS319/1YOTF010O/UCS319_1YOT_F010O_S_182_SLF.png",
+    id: 7,
+  },
+  {
+    brand: "BREQUET",
+    logo: "https://www.prada.com/content/dam/pradanux_products/U/UCS/UCS319/1YOTF010O/UCS319_1YOT_F010O_S_182_SLF.png",
+    id: 8,
+  },
+  {
+    brand: "BREITLING",
+    logo: "https://www.prada.com/content/dam/pradanux_products/U/UCS/UCS319/1YOTF010O/UCS319_1YOT_F010O_S_182_SLF.png",
+    id: 9,
+  },
+  {
+    brand: "CARTIER",
+    logo: "https://www.prada.com/content/dam/pradanux_products/U/UCS/UCS319/1YOTF010O/UCS319_1YOT_F010O_S_182_SLF.png",
+    id: 10,
+  },
+  {
+    brand: "CHOPARD",
+    logo: "https://www.prada.com/content/dam/pradanux_products/U/UCS/UCS319/1YOTF010O/UCS319_1YOT_F010O_S_182_SLF.png",
+    id: 11,
+  },
+  {
+    brand: "FRANCK MULLER GENEVE",
+    logo: "https://www.prada.com/content/dam/pradanux_products/U/UCS/UCS319/1YOTF010O/UCS319_1YOT_F010O_S_182_SLF.png",
+    id: 12,
+  },
+  {
+    brand: "DOXA",
+    logo: "https://www.prada.com/content/dam/pradanux_products/U/UCS/UCS319/1YOTF010O/UCS319_1YOT_F010O_S_182_SLF.png",
+    id: 13,
+  },
+  {
+    brand: "GIRARD PERREGAUX",
+    logo: "https://www.prada.com/content/dam/pradanux_products/U/UCS/UCS319/1YOTF010O/UCS319_1YOT_F010O_S_182_SLF.png",
+    id: 14,
+  },
+  {
+    brand: "GRAND SEIKO",
+    logo: "https://www.prada.com/content/dam/pradanux_products/U/UCS/UCS319/1YOTF010O/UCS319_1YOT_F010O_S_182_SLF.png",
+    id: 15,
+  },
+  {
+    brand: "H.Moser & Cie",
+    logo: "https://www.prada.com/content/dam/pradanux_products/U/UCS/UCS319/1YOTF010O/UCS319_1YOT_F010O_S_182_SLF.png",
+    id: 16,
+  },
+  {
+    brand: "HUBLOT",
+    logo: "https://www.prada.com/content/dam/pradanux_products/U/UCS/UCS319/1YOTF010O/UCS319_1YOT_F010O_S_182_SLF.png",
+    id: 17,
+  },
+  {
+    brand: "IWC Schaffhausen",
+    logo: "https://www.prada.com/content/dam/pradanux_products/U/UCS/UCS319/1YOTF010O/UCS319_1YOT_F010O_S_182_SLF.png",
+    id: 18,
+  },
+  {
+    brand: "Jacob & Co",
+    logo: "https://www.prada.com/content/dam/pradanux_products/U/UCS/UCS319/1YOTF010O/UCS319_1YOT_F010O_S_182_SLF.png",
+    id: 19,
+  },
+  {
+    brand: "Jaeger-LeCoultre",
+    logo: "https://www.prada.com/content/dam/pradanux_products/U/UCS/UCS319/1YOTF010O/UCS319_1YOT_F010O_S_182_SLF.png",
+    id: 20,
   },
 ];

@@ -1,7 +1,17 @@
+import { Col } from "antd";
 import React from "react";
+import AddProduct from "../components/CRUD/AddProduct/AddProduct";
+import AdminProducts from "../components/AdminProducts/AdminProducts";
 
 const AdminPage = () => {
-  return <div></div>;
+  return (
+    <div>
+      <Col span={12}>
+        <AddProduct />
+        <AdminProducts />
+      </Col>
+    </div>
+  );
 };
 
 export default AdminPage;

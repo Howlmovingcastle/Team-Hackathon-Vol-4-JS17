@@ -1,4 +1,4 @@
-import firebase from "firebase/compat/app";
+import fire from "firebase/compat/app";
 import "firebase/compat/app";
 import "firebase/compat/auth";
 
@@ -6,20 +6,18 @@ import "firebase/compat/firestore";
 import "firebase/analytics";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDjRuCkCBJkRMs8qCamtItJwzdBRyKGkJE",
-  authDomain: "team-hackathon-js-17-auth.firebaseapp.com",
-  projectId: "team-hackathon-js-17-auth",
-  storageBucket: "team-hackathon-js-17-auth.appspot.com",
-  messagingSenderId: "234985283483",
-  appId: "1:234985283483:web:506e3d8018f29aa8ff0b3e",
-  measurementId: "G-MZMMQSFL7T",
+  apiKey: "AIzaSyAR-RmrvAeYZUZhkxF-5amMr_-fcRYLrpA",
+  authDomain: "js-hack-17.firebaseapp.com",
+  projectId: "js-hack-17",
+  storageBucket: "js-hack-17.appspot.com",
+  messagingSenderId: "873410125428",
+  appId: "1:873410125428:web:69ba1c25579f21558c7b21",
+  measurementId: "G-B7NHWSZQG0",
 };
 
-const fire = firebase.initializeApp(firebaseConfig);
+export default fire.initializeApp(firebaseConfig);
 
 // const db = firebase.firestore();
 // const auth = firebase.auth();
 
 // export { db, auth };
-
-export default fire;

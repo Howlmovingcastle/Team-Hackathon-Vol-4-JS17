@@ -1,103 +1,55 @@
-import { createContext, useContext, useState, useEffect } from "react";
 import fire from "../fire";
+import React, { useEffect, useState } from "react";
 
-export const authContext = createContext();
-
-export const useAuth = () => {
-  return useContext(authContext);
-};
+export const authContext = React.createContext();
 
 const AuthContextProvider = ({ children }) => {
-  const [user, setUser] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [emailError, setEmailError] = useState("");
-  const [passwordError, setPasswordError] = useState("");
-  const [hasAccount, setHasAccount] = useState("");
+  const [currentUser, setCurrentUser] = useState("");
+  const [error, setError] = useState("");
 
-  console.log(email, "email in context");
-
-  const clearInputs = () => {
-    setEmail("");
-    setPassword("");
-  };
-
-  const clearErrors = () => {
-    setEmailError("");
-    setPasswordError("");
-  };
-
-  const handleSignUp = () => {
-    clearErrors();
-    fire
-      .auth()
-      .createUserWithEmailAndPassword(email, password)
-      .catch((err) => {
-        switch (err.code) {
-          case "auth/email-already-in-use":
-          case "auth/invalid-email":
-            setEmailError(err.message);
-            break;
-          case "auth/weak-password":
-            setPasswordError(err.message);
-            break;
-        }
-      });
-  };
-
-  const handleLogin = () => {
-    clearErrors();
+  function handleLogin(email, password, navigate) {
+    setError("");
     fire
       .auth()
       .signInWithEmailAndPassword(email, password)
-      .catch((err) => {
-        switch (err.code) {
-          case "auth/invalid-email":
-          case "auth/user-not-found":
-          case "auth/user-disabled":
-            setEmailError(err.message);
-            break;
-          case "auth/wrong-password":
-            setPasswordError(err.message);
-            break;
-        }
-      });
-  };
+      .then(() => navigate("/"))
+      .catch((err) => setError(err.message));
+  } // Функция для входа юзера
 
-  const handleLogout = () => {
+  function handleSignUp(email, password, navigate) {
+    setError("");
+    fire
+      .auth()
+      .createUserWithEmailAndPassword(email, password)
+      .then(() => handleLogin(email, password, navigate))
+      .catch((err) => setError(err.message));
+  } // функция для регистрации юзера
+
+  function handleLogOut() {
     fire.auth().signOut();
-  };
+  } // функция для выхода юзера
 
-  const authListener = () => {
+  function authListener() {
     fire.auth().onAuthStateChanged((user) => {
       if (user) {
-        clearInputs();
-        setUser(user);
+        setCurrentUser(user.email);
       } else {
-        setUser("");
+        setCurrentUser("");
       }
     });
-  };
+  } // функция для хранения юзеров и проверки на наличие
 
   useEffect(() => {
     authListener();
-  }, []);
+  }, []); // для отлавливания проверки при каждом рендере и всегда сохраняет текущее состояние currentUser
 
-  const values = {
-    email,
-    user,
-    hasAccount,
-    emailError,
-    passwordError,
-
-    setEmail,
-    setPassword,
-    handleLogin,
-    handleSignUp,
-    handleLogout,
-    setHasAccount,
-  };
-  return <authContext.Provider value={values}>{children}</authContext.Provider>;
+  return (
+    <authContext.Provider
+      value={{ currentUser, error, handleLogin, handleSignUp, handleLogOut }}
+    >
+      {children}
+    </authContext.Provider>
+  );
 };
 
 export default AuthContextProvider;

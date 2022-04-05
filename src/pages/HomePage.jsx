@@ -1,3 +1,4 @@
+import { Footer } from "antd/lib/layout/layout";
 import React from "react";
 import Categories from "../components/Categories/Categories";
 import Header from "../components/Header/Header";
@@ -13,6 +14,7 @@ const HomePage = () => {
       <Categories />
       <Products />
       <Newsletter />
+      <Footer />
     </div>
   );
 };
