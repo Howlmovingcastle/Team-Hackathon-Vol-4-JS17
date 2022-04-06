@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Button } from "@material-ui/core";
 import "./Visa.css";
 import { useNavigate } from "react-router-dom";
 
@@ -9,6 +8,7 @@ const Visa = () => {
   const [address, setAddress] = useState("");
   const [zip, setZip] = useState("");
   const navigate = useNavigate();
+  const [testJump, setTestJump] = useState("");
   function click() {
     if (!name || !email || !address || !zip) {
       return alert("Заполните все поля");
@@ -17,7 +17,18 @@ const Visa = () => {
     }
     navigate("/");
   }
-
+  // function testJump(x) {
+  //   var testJump = ~~x.getAttribute("maxlength");
+  //   if (testJump && x.value.length >= testJump) {
+  //     do {
+  //       x = x.nextSibling;
+  //     } while (x && !/text/.test(x.type));
+  //     if (x && /text/.test(x.type)) {
+  //       x.focus();
+  //     }
+  //   }
+  //   setTestJump();
+  // }
   return (
     <div>
       <div>
@@ -100,7 +111,40 @@ const Visa = () => {
                 </div>
                 <div className="inputBox">
                   <span>credit card number:</span>
-                  <input type="number" placeholder="1111-2222-3333" />
+                  <div>
+                    <input
+                      id="inp"
+                      type="text"
+                      onkeyup="testJump(this);"
+                      maxlength="4"
+                      size="1"
+                      placeholder="XXXX"
+                    />
+                    <input
+                      id="inp"
+                      type="text"
+                      onkeyup="testJump(this);"
+                      maxlength="4"
+                      size="1"
+                      placeholder="XXXX"
+                    />
+                    <input
+                      id="inp"
+                      type="text"
+                      onkeyup="testJump(this);"
+                      maxlength="4"
+                      size="1"
+                      placeholder="XXXX"
+                    />
+                    <input
+                      id="inp"
+                      type="text"
+                      onkeyup="testJump(this);"
+                      maxlength="4"
+                      size="1"
+                      placeholder="XXXX"
+                    />
+                  </div>
                 </div>
                 <div className="inputBox">
                   <span>exp month:</span>
@@ -115,7 +159,10 @@ const Visa = () => {
                     <span>CVV:</span>
                     <input type="number" placeholder="1234" />
                     <div>
-                      <button className="btn"> PAY</button>
+                      <button onClick={click} className="btn">
+                        {" "}
+                        PAY
+                      </button>
                     </div>
                   </div>
                 </div>

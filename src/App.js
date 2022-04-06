@@ -8,7 +8,7 @@ import ProductsContextProvider from "./contexts/productsContext";
 import CartContextProvider from "./contexts/cartContext";
 
 import "./index.css";
-import Visa from "./components/Visa/Visa";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 const App = () => {
   return (
     <>
