@@ -5,6 +5,7 @@ import Navbar from "../components/Navbar/Navbar";
 import Newsletter from "../components/Newsletter/Newsletter";
 import Products from "../components/Products/Products";
 import Footer from "../components/Footer/Footer";
+import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
 
 const HomePage = () => {
   return (
@@ -15,6 +16,7 @@ const HomePage = () => {
       <Products />
       <Newsletter />
       <Footer />
+      <ScrollToTop />
     </div>
   );
 };

@@ -8,7 +8,7 @@ import ProductsContextProvider from "./contexts/productsContext";
 import CartContextProvider from "./contexts/cartContext";
 
 import "./index.css";
-import { Footer } from "antd/lib/layout/layout";
+
 const App = () => {
   return (
     <>

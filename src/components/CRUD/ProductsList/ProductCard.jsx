@@ -33,6 +33,7 @@ const ProductCard = ({ item }) => {
           }}
           style={{ fontSize: "25px", color: checkItem ? "red" : "black" }}
         />,
+
         <Link key="ellipsis" to={`/products/${item.id}`}>
           <EllipsisOutlined style={{ fontSize: "25px", color: "black" }} />
         </Link>,

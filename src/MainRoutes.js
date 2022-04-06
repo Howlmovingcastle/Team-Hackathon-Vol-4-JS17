@@ -11,6 +11,7 @@ import Auth from "./components/Auth/Auth";
 import { authContext } from "./contexts/AuthContext";
 
 import { ADMIN_EMAIL } from "./helpers/consts";
+import Visa from "./components/Visa/Visa";
 
 const MainRoutes = () => {
   const PUBLIC_ROUTES = [
@@ -39,6 +40,11 @@ const MainRoutes = () => {
       element: <Cart />,
       id: 5,
     },
+    {
+      link: "/visa",
+      element: <Visa />,
+      id: 6,
+    },
   ];
 
   const PRIVATE_ROUTES = [
@@ -59,7 +65,7 @@ const MainRoutes = () => {
     <>
       <Routes>
         {PUBLIC_ROUTES.map((item) => (
-          <Route path={item.link} element={item.element} />
+          <Route key={item.id} path={item.link} element={item.element} />
         ))}
 
         {PRIVATE_ROUTES.map((item) => (

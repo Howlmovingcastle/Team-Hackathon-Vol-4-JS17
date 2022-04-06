@@ -62,7 +62,13 @@ const Details = ({ item }) => {
           <div>{oneProduct.description}</div>
         </div>
       </div>
-      <video src={oneProduct.video} autoPlay loop muted width="100%"></video>
+      <video
+        src="https://content.thewosgroup.com/productvideo/17381091.mp4"
+        autoPlay
+        loop
+        muted
+        width="100%"
+      ></video>
       <div>
         <Comments currentUserId={"1"} />
       </div>

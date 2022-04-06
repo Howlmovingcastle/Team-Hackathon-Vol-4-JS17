@@ -52,6 +52,7 @@ const ProductsContextProvider = ({ children }) => {
     await axios.patch(`${PRODUCTS_API}/${id}`, editedProduct);
     getProducts();
   }
+
   return (
     <productsContext.Provider
       value={{
