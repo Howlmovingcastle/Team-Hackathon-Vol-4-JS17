@@ -3,15 +3,10 @@ import { Button, Carousel } from "antd";
 import { Link, useParams } from "react-router-dom";
 import { productsContext } from "../../contexts/productsContext";
 import Comments from "../../comments/Comments";
-// import { cartContext } from "../../contexts/cartContext";
+import video2 from "../../assets/video2.mp4";
 
 const Details = ({ item }) => {
   const { getOneProduct, oneProduct } = useContext(productsContext);
-  // const { addProductToCart, checkItemInCart } = useContext(cartContext);
-
-  // const [checkItem, setCheckItem] = useState(checkItemInCart(item.id));
-
-  // useEffect(() => {}, []);
 
   const params = useParams();
   console.log(params);
@@ -43,14 +38,7 @@ const Details = ({ item }) => {
           <h3>{oneProduct.model}</h3>
           <h2>{"$ " + oneProduct.price}</h2>
           <Link to="/cart">
-            <Button
-              size="large"
-              style={{ width: "100%", margin: "15px 0px" }}
-              // onClick={() => {
-              //   addProductToCart(item);
-              //   setCheckItem(checkItemInCart(item.id));
-              // }}
-            >
+            <Button size="large" style={{ width: "100%", margin: "15px 0px" }}>
               Add to cart
             </Button>
           </Link>
@@ -62,13 +50,7 @@ const Details = ({ item }) => {
           <div>{oneProduct.description}</div>
         </div>
       </div>
-      <video
-        src="https://content.thewosgroup.com/productvideo/17381091.mp4"
-        autoPlay
-        loop
-        muted
-        width="100%"
-      ></video>
+      <video src={video2} autoPlay loop muted width="100%"></video>
       <div>
         <Comments currentUserId={"1"} />
       </div>

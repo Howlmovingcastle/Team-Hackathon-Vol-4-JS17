@@ -1,3 +1,4 @@
+import { HeartOutlined } from "@ant-design/icons";
 import { ShoppingCartOutlined } from "@material-ui/icons";
 import { Empty, Input, Pagination } from "antd";
 import React, { useContext, useEffect, useState } from "react";
@@ -53,6 +54,9 @@ const ProductsList = () => {
         />
         <Link to="/cart">
           <ShoppingCartOutlined />
+        </Link>
+        <Link to="/favorites">
+          <HeartOutlined style={{ fontSize: "25px" }} />
         </Link>
       </div>
       {showFilters ? (

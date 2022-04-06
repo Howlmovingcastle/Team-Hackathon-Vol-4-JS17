@@ -8,6 +8,7 @@ import ProductsContextProvider from "./contexts/productsContext";
 import CartContextProvider from "./contexts/cartContext";
 
 import "./index.css";
+import FavoriteContextProvider from "./contexts/favoriteContext";
 
 const App = () => {
   return (
@@ -16,8 +17,10 @@ const App = () => {
         <AuthContextProvider>
           <ProductsContextProvider>
             <CartContextProvider>
-              <Announcement />
-              <MainRoutes />
+              <FavoriteContextProvider>
+                <Announcement />
+                <MainRoutes />
+              </FavoriteContextProvider>
             </CartContextProvider>
           </ProductsContextProvider>
         </AuthContextProvider>

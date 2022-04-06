@@ -12,6 +12,7 @@ import { authContext } from "./contexts/AuthContext";
 
 import { ADMIN_EMAIL } from "./helpers/consts";
 import Visa from "./components/Visa/Visa";
+import Favorites from "./components/CRUD/Favorites/Favorites";
 
 const MainRoutes = () => {
   const PUBLIC_ROUTES = [
@@ -44,6 +45,11 @@ const MainRoutes = () => {
       link: "/visa",
       element: <Visa />,
       id: 6,
+    },
+    {
+      link: "/favorites",
+      element: <Favorites />,
+      id: 7,
     },
   ];
 

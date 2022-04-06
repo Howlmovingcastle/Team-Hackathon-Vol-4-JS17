@@ -4,8 +4,8 @@ import {
   ShoppingCartOutlined,
 } from "@material-ui/icons";
 
-// import RecommendOutlinedIcon from "@mui/icons-material/RecommendOutlined";
 import styled from "styled-components";
+import { LikeOutlined } from "@ant-design/icons";
 
 const Info = styled.div`
   opacity: 0;
@@ -74,11 +74,10 @@ const Product = ({ item }) => {
       <Circle />
       <Image src={item.img} />
       <Info>
-        {/* <Icon>
-          <RecommendOutlinedIcon />
-        </Icon> */}
         <Icon>
-          <FavoriteBorderOutlined />
+          <LikeOutlined
+            style={{ fontSize: "28px", cursor: "pointer", marginRight: "5px" }}
+          />
         </Icon>
         <Icon>
           <Link to="/products">
