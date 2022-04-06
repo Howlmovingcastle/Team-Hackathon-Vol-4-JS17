@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { Button, Carousel } from "antd";
 import { Link, useParams } from "react-router-dom";
 import { productsContext } from "../../contexts/productsContext";
+import Comments from "../../comments/Comments";
 // import { cartContext } from "../../contexts/cartContext";
 
 const Details = ({ item }) => {
@@ -62,6 +63,9 @@ const Details = ({ item }) => {
         </div>
       </div>
       <video src={oneProduct.video} autoPlay loop muted width="100%"></video>
+      <div>
+        <Comments currentUserId={"1"} />
+      </div>
     </div>
   ) : (
     <div>
