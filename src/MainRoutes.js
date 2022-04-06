@@ -8,6 +8,7 @@ import Cart from "./components/CRUD/Cart/Cart";
 import Details from "./components/Details/Details";
 import ProductsList from "./components/CRUD/ProductsList/ProductsList";
 import Auth from "./components/Auth/Auth";
+import Visa from "./components/Visa/Visa";
 import { authContext } from "./contexts/AuthContext";
 
 import { ADMIN_EMAIL } from "./helpers/consts";
@@ -38,6 +39,11 @@ const MainRoutes = () => {
       link: "/cart",
       element: <Cart />,
       id: 5,
+    },
+    {
+      link: "/visa",
+      element: <Visa />,
+      id: 6,
     },
   ];
 
