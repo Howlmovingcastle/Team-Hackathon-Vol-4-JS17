@@ -58,6 +58,7 @@ const CartContextProvider = ({ children }) => {
       count: 1,
       subPrice: product.price,
     };
+
     let isProductInCart = cart.products.some(
       (item) => item.item.id == newProduct.item.id
     );
