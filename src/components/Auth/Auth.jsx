@@ -38,12 +38,14 @@ const Auth = () => {
         flexDirection: "column",
         alignItems: "center",
         marginTop: "20px",
+        textTransform: "none",
       }}
     >
       <Col span={7}></Col>
       <Col span={10}>
         {error ? <Alert type="error" description={error} /> : null}
         <Form
+          style={{ textTransform: "none" }}
           name="normal_login"
           className="login-form"
           initialValues={{
@@ -52,6 +54,7 @@ const Auth = () => {
           onFinish={onFinish}
         >
           <Form.Item
+            style={{ textTransform: "none" }}
             name="email"
             rules={[
               {
@@ -65,11 +68,13 @@ const Auth = () => {
             ]}
           >
             <Input
+              style={{ textTransform: "none" }}
               prefix={<UserOutlined className="site-form-item-icon" />}
               placeholder="Username"
             />
           </Form.Item>
           <Form.Item
+            style={{ textTransform: "none" }}
             name="password"
             rules={[
               {
@@ -82,6 +87,7 @@ const Auth = () => {
             ]}
           >
             <Input
+              style={{ textTransform: "none" }}
               prefix={<LockOutlined className="site-form-item-icon" />}
               type="password"
               placeholder="Password"

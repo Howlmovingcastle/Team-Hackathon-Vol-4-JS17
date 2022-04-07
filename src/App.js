@@ -27,6 +27,7 @@ const App = () => {
     margin: 0 auto;
     border-color: red;
     margin-top: 250px;
+    text-transform: none;
   `;
 
   return (

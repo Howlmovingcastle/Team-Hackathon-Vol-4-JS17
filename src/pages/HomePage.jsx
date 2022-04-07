@@ -6,6 +6,7 @@ import Newsletter from "../components/Newsletter/Newsletter";
 import Products from "../components/Products/Products";
 import Footer from "../components/Footer/Footer";
 import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
+import Contacts from "../components/Contacts/Contacts";
 
 const HomePage = () => {
   return (
@@ -15,6 +16,7 @@ const HomePage = () => {
       <Categories />
       <Products />
       <Newsletter />
+      <Contacts />
       <Footer />
       <ScrollToTop />
     </div>

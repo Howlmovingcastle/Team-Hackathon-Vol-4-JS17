@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Footer.css";
 
+import telegramIcon from "../../assets/telegram-icon.svg";
+
 const Footer = () => {
   return (
     <footer class="footer">
@@ -72,7 +74,7 @@ const Footer = () => {
           </div>
           <div class="footer-col">
             <h4>follow us</h4>
-            <div class="social-links">
+            <div style={{ fontSize: "20px" }} class="social-links">
               <a href="#">
                 <i class="fab fa-facebook-f"></i>
               </a>
@@ -85,6 +87,13 @@ const Footer = () => {
               <a href="#">
                 <i class="fab fa-linkedin-in"></i>
               </a>
+              <div className="footer-telegram-icon">
+                <br></br>
+                <p>Have a chat with our manager!</p>
+                <a href="https://t.me/laylacommerce_bot">
+                  <img src={telegramIcon} alt="telegramIcon" />
+                </a>
+              </div>
             </div>
           </div>
         </div>

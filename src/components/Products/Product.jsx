@@ -75,11 +75,6 @@ const Product = ({ item }) => {
       <Image src={item.img} />
       <Info>
         <Icon>
-          <LikeOutlined
-            style={{ fontSize: "28px", cursor: "pointer", marginRight: "5px" }}
-          />
-        </Icon>
-        <Icon>
           <Link to="/products">
             <ShoppingCartOutlined />
           </Link>

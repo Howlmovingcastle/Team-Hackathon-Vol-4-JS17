@@ -6,7 +6,7 @@ const Announcement = () => {
   return (
     <Link to="/">
       <div className="container-announcement">
-        Super Deal! Free Shipping on Orders Over $50
+        Super Deal! Free Shipping on Orders Over $5000
       </div>
     </Link>
   );

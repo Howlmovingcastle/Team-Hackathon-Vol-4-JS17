@@ -53,6 +53,12 @@ const ProductsContextProvider = ({ children }) => {
     getProducts();
   }
 
+  // likes
+
+  async function editOneLike(id, likes) {
+    await axios.patch(`${PRODUCTS_API}/${id}`, { likes: likes });
+    getProducts();
+  }
   return (
     <productsContext.Provider
       value={{
@@ -65,6 +71,7 @@ const ProductsContextProvider = ({ children }) => {
         getOneProduct,
         createProduct,
         updateProduct,
+        editOneLike,
       }}
     >
       {children}
